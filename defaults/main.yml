@@ -1,0 +1,16 @@
+---
+# defaults file for droplet
+droplet_backups: false
+droplet_image: ""
+droplet_ipv6: false
+droplet_monitoring: false
+droplet_private_networking: false
+droplet_region: nyc2
+droplet_size: s-1vcpu-1gb
+droplet_state: present
+droplet_ssh_keys: []
+droplet_tags: ""
+droplet_unique_name: true
+droplet_user_data: ""
+droplet_wait: true
+droplet_wait_timeout: 120

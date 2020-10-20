@@ -1,0 +1,21 @@
+---
+# tasks file for droplet
+- name: Provision DigitalOcean droplet
+  digital_ocean_droplet:
+    backups: "{{ droplet_backups }}"
+    image: "{{ droplet_image }}"
+    ipv6: "{{ droplet_ipv6 }}"
+    monitoring: "{{ droplet_monitoring }}"
+    name: "{{ droplet_name }}"
+    oauth_token: "{{ droplet_oauth_token }}"
+    private_networking: "{{ droplet_private_networking }}"
+    region: "{{ droplet_region }}"
+    size: "{{ droplet_size }}"
+    ssh_keys: "{{ droplet_ssh_keys }}"
+    state: "{{ droplet_state }}"
+    tags: "{{ droplet_tags }}"
+    unique_name: "{{ droplet_unique_name }}"
+    user_data: "{{ droplet_user_data }}"
+    wait: "{{ droplet_wait }}"
+    wait_timeout: "{{ droplet_wait_timeout }}"
+  register: droplet
