@@ -32,7 +32,7 @@ Example Playbook
 
 Create a digital ocean droplet.
 
-    - hosts: servers
+    - hosts: localhost
       roles:
          - role: droplet
            droplet_oauth_token: 0398791xxx
@@ -53,7 +53,6 @@ BSD
 Author Information
 ------------------
 
-Robleh Esa
-github.com/robleh
-roblehesa.com
-@roblehesa
+- [Robleh Esa](https://roblehesa.com)
+- [github.com/robleh](httpss://github.com/Robleh)
+- [@roblehesa](https://twitter.com/roblehesa)
