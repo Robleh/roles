@@ -1,0 +1,44 @@
+---
+# tasks file for git
+- name: Install git
+  package:
+    name: git
+    state: present
+
+- name: Create git user
+  user:
+    create_home: true
+    name: git
+    shell: /usr/bin/git-shell
+    state: present
+
+- name: Create git-shell-commands directory
+  file:
+    path: /home/git/git-shell-commands
+    state: directory
+
+- name: Disable interactive login 
+  copy:
+    src: no-interactive-login
+    dest: /home/git/git-shell-commands/no-interactive-login
+    owner: root
+    group: root
+    mode: 0655
+
+- name: Create /home/git/.hushlogin file
+  file:
+    path: /home/git/.hushlogin
+    state: touch
+
+- name: Authorize limited SSH keys
+  authorized_key:
+    user: git
+    state: present
+    key_options: "\
+      no-port-forwarding,\
+      no-agent-forwarding,\
+      no-pty,\
+      no-user-rc,\
+      no-X11-forwarding"
+    key: "{{ lookup('file', item) }}"
+  loop: "{{ git_ssh_pub_keys }}"
