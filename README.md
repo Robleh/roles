@@ -54,5 +54,5 @@ Author Information
 ------------------
 
 - [Robleh Esa](https://roblehesa.com)
-- [github.com/robleh](httpss://github.com/Robleh)
-- [@roblehesa](https://twitter.com/roblehesa)
+- [Github](https://github.com/Robleh)
+- [Twitter](https://twitter.com/roblehesa)
